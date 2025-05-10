@@ -1,0 +1,251 @@
+
+body {
+  font-family: 'Museo Sans', sans-serif;
+}
+
+/* HEADER PRINCIPAL */
+.main-header {
+  position: relative;
+  background-image: url('assets/Header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* SOMBRA OSCURA */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* CONTENEDOR DE NAV + LOGO */
+.container-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  flex-wrap: wrap;
+}
+
+/* LOGO Y TEXTO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 100px;
+  height: 80px;
+}
+
+.logo-text {
+  font-size: clamp(1.2rem, 2vw, 2rem); /* Responsive */
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem); 
+  padding: 8px 16px;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background-color: white;
+  color: #2a7d5f;
+}
+
+/* TEXTO CENTRAL */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.5rem); 
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* SOBRE CORINGAM */
+.sobre-coringam {
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: #e7f1ed; /* Color institucional de fondo */
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', 'Open Sans', sans-serif; /* Temporal hasta tener Museo Sans */
+}
+
+.sobre-texto {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.sobre-texto h2 {
+  color: #001d7e; /* Color institucional para títulos */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.sobre-imagen {
+  flex: 1 1 40px;
+  text-align: center;
+}
+
+.sobre-imagen img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+/* NUESTROS SERVICIOS */
+.servicios {
+  padding: 4rem 2rem;
+  background-color: #fefdf9;
+  text-align: center;
+}
+
+.servicios h2 {
+  font-size: 2rem;
+  color: #195f47;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor del carrusel */
+.carrusel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Carrusel que se desliza */
+.carrusel {
+  display: flex;
+  overflow-x: auto; 
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+}
+
+/* Tarjetas */
+.servicio-card {
+  min-width: 280px;
+  max-width: 280px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.servicio-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.servicio-card h3 {
+  color: #195f47;
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.servicio-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.btn-servicio {
+  display: inline-block;
+  background-color: #195f47;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Botones carrusel */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.carrusel-btn.izquierda {
+  left: 10px;
+}
+
+.carrusel-btn.derecha {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrusel {
+    gap: 1rem;
+  }
+
+  .servicio-card {
+    min-width: 220px;
+    max-width: 220px;
+  }
+
+  .carrusel-btn {
+    font-size: 1.5rem;
+  }
+}
