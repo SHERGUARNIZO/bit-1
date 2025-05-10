@@ -1,79 +1,68 @@
 
+/* Fuente base */
 body {
-  font-family: 'Museo Sans', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
 /* HEADER PRINCIPAL */
 .main-header {
   position: relative;
-  background-image: url('assets/Header.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 420px;
   color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden;
 }
 
-/* SOMBRA OSCURA */
+/* Fondo oscuro encima de la imagen */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-/* CONTENEDOR DE NAV + LOGO */
+/* CONTENEDOR DE TODO EL CONTENIDO VISIBLE DEL HEADER */
 .container-header {
   position: relative;
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  padding: 1rem 2rem;
 }
 
-/* LOGO Y TEXTO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+/* MENÚ DE NAVEGACIÓN (ARRIBA A LA DERECHA) */
+.nav-menu {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 2;
 }
 
-.logo img {
-  width: 100px;
-  height: 80px;
-}
-
-.logo-text {
-  font-size: clamp(1.2rem, 2vw, 2rem); /* Responsive */
-  font-weight: bold;
-  color: white;
-  letter-spacing: 1px;
-}
-
-/* MENÚ DE NAVEGACIÓN */
 .nav-menu ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .nav-menu a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem); 
+  font-weight: 600;
   padding: 8px 16px;
+  font-size: 1rem;
   border: 2px solid white;
-  border-radius: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 25px;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
 
 .nav-menu a:hover {
@@ -81,20 +70,26 @@ body {
   color: #2a7d5f;
 }
 
-/* TEXTO CENTRAL */
-.hero-text {
-  position: relative;
-  z-index: 2;
+/* TÍTULO CENTRAL */
+.titulo-coringam {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: bold;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
   text-align: center;
-  margin-bottom: 10rem;
 }
 
-.hero-text h1 {
+/* SUBTÍTULO (BAJO EL TÍTULO) */
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
   margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2.5rem); 
-  font-weight: bold;
-  line-height: 1.3;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
+
 
 /* SOBRE CORINGAM */
 .sobre-coringam {
@@ -168,7 +163,9 @@ display: flex;
   overflow-x: auto; 
   scroll-behavior: smooth;
   gap: 1.5rem;
+  position: relative; 
 }
+
 
 /* Tarjetas */
 .servicio-card {
@@ -248,4 +245,63 @@ display: flex;
   .carrusel-btn {
     font-size: 1.5rem;
   }
+}
+.servicio-card:hover,
+.servicio-card:focus-within {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(25, 95, 71, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+/* CONTACTA-STAFF */
+.conecta-staff {
+  display: flex;
+  justify-content: space-between;
+  background-color: #195f47;
+  padding: 2rem;
+  color: white;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 3rem; /* Espacio superior para separar de 'Nuestros Servicios' */
+}
+
+/* Caja individual */
+.conecta-box, .staff-box {
+  flex: 1 1 300px;
+  padding: 1rem;
+  background-color: #195f47;
+  text-align: center;
+}
+
+/* Línea divisoria */
+.staff-box {
+  border-left: 2px solid rgba(255,255,255,0.4);
+}
+
+/* Títulos */
+.conecta-box h3, .staff-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Párrafos */
+.conecta-box p, .staff-box p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Botones */
+.btn-contactar, .btn-postular {
+  background-color: white;
+  color: #195f47;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-contactar:hover, .btn-postular:hover {
+  background-color: #f0f0f0;
 }
