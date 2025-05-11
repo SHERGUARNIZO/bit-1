@@ -177,13 +177,16 @@ display: flex;
   padding: 1rem;
   text-align: center;
   flex-shrink: 0;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .servicio-card img {
   width: 100%;
-  border-radius: 8px;
   height: auto;
-}
+  object-fit: cover;
+  border-radius: 8px;
+ }
 
 .servicio-card h3 {
   color: #195f47;
@@ -304,4 +307,199 @@ display: flex;
 
 .btn-contactar:hover, .btn-postular:hover {
   background-color: #f0f0f0;
+}
+@media (max-width: 768px) {
+  /* Menú de navegación en móvil */
+  .nav-menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+
+  /* Tarjeta centrada en carrusel móvil */
+  .carrusel-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .carrusel {
+    scroll-padding-left: 1rem;
+  }
+
+  /* Sección conectar / staff en columna y línea horizontal */
+  /* Contenedor general */
+.conecta-staff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+/* Tarjetas */
+.conecta-box,
+.staff-box {
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+
+/* Separadores */
+.separator-vertical {
+  width: 1px;
+  height: 100px;
+  background-color: white;
+}
+
+.separator-horizontal {
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  display: none;
+}
+
+/* Botones */
+.btn-contactar,
+.btn-postular {
+  display: inline-block;
+  background-color: white;
+  color: #005a43;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.btn-contactar:hover,
+.btn-postular:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Active (clic) */
+.btn-contactar:active,
+.btn-postular:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .conecta-staff {
+    flex-direction: column;
+  }
+
+  .separator-vertical {
+    display: none;
+  }
+
+  .separator-horizontal {
+    display: block;
+    margin: 0 auto;
+  }
+
+  
+  /* FOOTER */
+ /* === ESPACIO ANTES DEL FOOTER === */
+.conecta-staff {
+  margin-bottom: 3rem;
+}
+
+/* === FOOTER GLOBAL === */
+.footer {
+  width: 100%;
+  background-color: #f6eedf;
+  box-sizing: border-box;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* === CONTENEDOR INTERNO CENTRADO === */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* === LOGO ADAPTABLE === */
+.footer-logo {
+  flex: 0 0 auto;
+  max-width: 200px;
+  width: 100%;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* === INFORMACIÓN DE CONTACTO === */
+.footer-info {
+  flex: 1 1 300px;
+  font-size: 0.95rem;
+}
+
+.footer-info p {
+  margin: 0.4rem 0;
+}
+
+.footer-info a {
+  color: #195f47;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #195f47;
+  font-weight: bold;
+}
+
+/* === DERECHOS RESERVADOS === */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.footer-bottom a {
+  color: #195f47;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+
+  }
+}
+
+}
+
 }
