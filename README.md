@@ -2,7 +2,9 @@ CORINGAM.PROYECTOS (Entregable No. 2 Bootcamp Bit-1)
 
 Autor: Sherly Guarnizo 
 
-GitHubRepositorio: https://github.com/SHERGUARNIZO/bit-1.gitPágina alojada: https://sherguarnizo.github.io/bit-1/
+GitHubRepositorio: https://github.com/SHERGUARNIZO/bit-1.git
+
+gitPágina alojada: https://sherguarnizo.github.io/bit-1/
 
 
 Figura: Diseño borrador de la landpage como punto de partida:
