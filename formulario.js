@@ -1,15 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const carrusel = document.querySelector('.carrusel');
-  const btnIzquierda = document.querySelector('.carrusel-btn.izquierda');
-  const btnDerecha = document.querySelector('.carrusel-btn.derecha');
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-  if (carrusel && btnIzquierda && btnDerecha) {
-    btnDerecha.addEventListener('click', () => {
-      carrusel.scrollBy({ left: 300, behavior: 'smooth' });
-    });
+  const nombre = document.getElementById('nombre').value.trim();
+  const correo = document.getElementById('correo').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
+  const mensaje = document.getElementById('mensaje').value.trim();
 
-    btnIzquierda.addEventListener('click', () => {
-      carrusel.scrollBy({ left: -300, behavior: 'smooth' });
-    });
+  if (!nombre || !correo || !telefono || !mensaje) {
+    alert('Por favor completa todos los campos antes de enviar.');
+    return;
   }
+
+  // Muestra mensaje de éxito y limpia formulario
+  document.getElementById('mensajeExito').style.display = 'block';
+  this.reset();
 });

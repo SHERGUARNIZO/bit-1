@@ -1,9 +1,11 @@
 
 /* Fuente base */
 body {
-  font-family: 'Segoe UI', sans-serif;
+   background-color: #f6eedf;
+    font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 /* HEADER PRINCIPAL */
 .main-header {
@@ -11,8 +13,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 420px;
-  color: white;
+  height: 520px;
+  color: #f6eedf;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +100,7 @@ display: flex;
   justify-content: space-between;
   padding: 2rem;
   gap: 1rem;
-  background-color: #e7f1ed; /* Color institucional de fondo */
+  background-color: #f6eedf; /* Color institucional de fondo */
   flex-wrap: wrap;
   font-family: 'Segoe UI', 'Open Sans', sans-serif; /* Temporal hasta tener Museo Sans */
 }
@@ -116,7 +118,7 @@ display: flex;
 }
 
 .sobre-texto p {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   line-height: 1.6;
   color: #333;
   text-align: justify;
@@ -195,7 +197,7 @@ display: flex;
 }
 
 .servicio-card p {
-  font-size: 0.95rem;
+  font-size: 1.7rem;
   color: #333;
   margin-bottom: 1rem;
 }
@@ -208,7 +210,7 @@ display: flex;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 /* Botones carrusel */
@@ -256,177 +258,109 @@ display: flex;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 1;
 }
-/* CONTACTA-STAFF */
-.conecta-staff {
-  display: flex;
-  justify-content: space-between;
-  background-color: #195f47;
-  padding: 2rem;
-  color: white;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 3rem; /* Espacio superior para separar de 'Nuestros Servicios' */
-}
-
-/* Caja individual */
-.conecta-box, .staff-box {
-  flex: 1 1 300px;
-  padding: 1rem;
-  background-color: #195f47;
-  text-align: center;
-}
-
-/* Línea divisoria */
-.staff-box {
-  border-left: 2px solid rgba(255,255,255,0.4);
-}
-
-/* Títulos */
-.conecta-box h3, .staff-box h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Párrafos */
-.conecta-box p, .staff-box p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-/* Botones */
-.btn-contactar, .btn-postular {
-  background-color: white;
-  color: #195f47;
-  font-weight: bold;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.btn-contactar:hover, .btn-postular:hover {
-  background-color: #f0f0f0;
-}
-@media (max-width: 768px) {
-  /* Menú de navegación en móvil */
-  .nav-menu ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-  }
-
-  .nav-menu a {
-    font-size: 0.85rem;
-    padding: 4px 10px;
-  }
-
-  /* Tarjeta centrada en carrusel móvil */
-  .carrusel-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .carrusel {
-    scroll-padding-left: 1rem;
-  }
-
-  /* Sección conectar / staff en columna y línea horizontal */
-  /* Contenedor general */
+/* === SECCIÓN CONTACTA Y STAFF COMO TARJETAS INDIVIDUALES === */
 .conecta-staff {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
   flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 1rem 2rem;
+  background-color: #f6eedf; /* Beige continuo */
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
 }
 
-/* Tarjetas */
+/* Tarjetas individuales */
 .conecta-box,
 .staff-box {
-  flex: 1;
-  text-align: center;
+  background-color: #195f47;
   color: white;
+  flex: 1 1 300px;
+  max-width: 360px;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* Separadores */
-.separator-vertical {
-  width: 1px;
-  height: 100px;
-  background-color: white;
+/* Efecto hover */
+.conecta-box:hover,
+.staff-box:hover {
+  transform: translateY(-5px);
 }
 
-.separator-horizontal {
-  width: 80%;
-  height: 1px;
-  background-color: white;
-  display: none;
+/* Títulos más grandes */
+.conecta-box h3,
+.staff-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Párrafos más grandes */
+.conecta-box p,
+.staff-box p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 
 /* Botones */
 .btn-contactar,
 .btn-postular {
-  display: inline-block;
   background-color: white;
-  color: #005a43;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
+  color: #195f47;
   font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
   text-decoration: none;
-  border: none;
   transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 1.5rem;
 }
 
-/* Hover */
 .btn-contactar:hover,
 .btn-postular:hover {
   background-color: #e0e0e0;
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 
-/* Active (clic) */
 .btn-contactar:active,
 .btn-postular:active {
   transform: scale(0.95);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .conecta-staff {
     flex-direction: column;
+    align-items: center;
   }
 
-  .separator-vertical {
-    display: none;
+  .conecta-box,
+  .staff-box {
+    width: 100%;
+    max-width: 100%;
   }
 
   .separator-horizontal {
-    display: block;
-    margin: 0 auto;
+    display: none;
   }
-
-  
-  /* FOOTER */
- /* === ESPACIO ANTES DEL FOOTER === */
-.conecta-staff {
-  margin-bottom: 3rem;
 }
 
-/* === FOOTER GLOBAL === */
+/* === FOOTER === */
 .footer {
   width: 100%;
   background-color: #f6eedf;
   box-sizing: border-box;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1.5rem 1rem;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
 }
 
-/* === CONTENEDOR INTERNO CENTRADO === */
+/* CONTENEDOR INTERNO */
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -437,24 +371,27 @@ display: flex;
   gap: 2rem;
 }
 
-/* === LOGO ADAPTABLE === */
+/* LOGO CENTRADO Y AJUSTADO */
 .footer-logo {
-  flex: 0 0 auto;
-  max-width: 200px;
-  width: 100%;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem; /* antes estaba 10rem */
 }
 
 .footer-logo img {
+  max-width: 350px;
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
 }
 
-/* === INFORMACIÓN DE CONTACTO === */
+/* INFORMACIÓN DE CONTACTO */
 .footer-info {
   flex: 1 1 300px;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 
 .footer-info p {
@@ -474,16 +411,17 @@ display: flex;
   margin-right: 8px;
   color: #195f47;
   font-weight: bold;
+  display: inline-block;
 }
 
-/* === DERECHOS RESERVADOS === */
+/* DERECHOS RESERVADOS */
 .footer-bottom {
   max-width: 1200px;
   margin: 2rem auto 0 auto;
   text-align: center;
   border-top: 1px solid #ccc;
   padding-top: 1rem;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
 }
 
 .footer-bottom a {
@@ -496,10 +434,21 @@ display: flex;
   text-decoration: underline;
 }
 
-
+/* RESPONSIVO FOOTER */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-}
 
-}
+  .footer-logo {
+    max-width: 160px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
 
 }
